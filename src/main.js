@@ -17,9 +17,9 @@ const vuetify = createVuetify({
   theme: {
     dark: true, // Puedes usar true para un tema oscuro o false para uno claro
     themes: {
-      background: '#FFFFFF',
+      background: '#0E0B16',
       surface: '#FFFFFF',
-      primary: '#6200EE',
+      primary: '#A997DF',
       'primary-darken-1': '#3700B3',
       secondary: '#03DAC6',
       'secondary-darken-1': '#018786',
