@@ -1,7 +1,6 @@
 <template>
 
-<v-app>
-  <v-app-bar app color="red">
+  <v-app-bar app>
       <!-- Contenido de la barra de navegación -->
       <v-app-bar-title>Title</v-app-bar-title>
 
@@ -14,7 +13,6 @@
 
   </v-app-bar>
 
-  </v-app>
 </template>
 
 

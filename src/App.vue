@@ -5,6 +5,8 @@ import NavBar from './components/NavBar.vue'
 </script>
 
 <template>
+  <v-app>
+
   <NavBar /> <!-- Agrega el componente NavBar aquí -->
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
@@ -20,6 +22,8 @@ import NavBar from './components/NavBar.vue'
   </header>
 
   <RouterView />
+</v-app>
+
 </template>
 
 <style scoped>
