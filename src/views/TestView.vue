@@ -24,8 +24,9 @@
     methods: {
       async fetchPosts() {
         /* eslint-disable no-undef */
-        const apiKey = process.env.VUE_APP_GHOST_API_KEY;
-        const apiUrlBase = process.env.VUE_APP_GHOST_API_URL;
+        const apiKey = import.meta.env.VUE_APP_GHOST_API_KEY;
+        const apiUrlBase = import.meta.env.VUE_APP_GHOST_API_URL;
+
         /* eslint-disable no-undef */
         const apiUrl = apiUrlBase + 'posts/?key=' + apiKey + '&limit=5&order=view_count DESC';
         try {
