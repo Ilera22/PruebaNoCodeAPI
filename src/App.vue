@@ -27,5 +27,9 @@ import NavBar from './components/NavBar.vue'
 </template>
 
 <style scoped>
+.v-application {
+  background-color: var(--v-theme-background); /* Utiliza la variable CSS del tema de Vuetify */
+}
+
 
 </style>
