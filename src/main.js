@@ -15,30 +15,21 @@ const vuetify = createVuetify({
   components,
   directives,
   theme: {
-    dark: true, // Puedes usar true para un tema oscuro o false para uno claro
+    defaultTheme: 'dark', // Establece el tema por defecto a 'light'
     themes: {
-      background: '#0E0B16',
-      surface: '#FFFFFF',
-      primary: '#A997DF',
-      'primary-darken-1': '#3700B3',
-      secondary: '#03DAC6',
-      'secondary-darken-1': '#018786',
-      error: '#B00020',
-      info: '#2196F3',
-      success: '#4CAF50',
-      warning: '#FB8C00',
-      },
-      light: {
-        primary: '#2196F3', // Color primario en modo claro
-        secondary: '#FF4081', // Color secundario en modo claro
-        accent: '#536DFE', // Color de acento en modo claro
+      dark: true,
+        colors: {
+        background:'#1976D2',
+        primary: '#1976D2', // Color primario en modo oscuro
+        secondary: '#424242', // Color secundario en modo oscuro
+        accent: '#82B1FF', // Color de acento en modo oscuro
       },
     },
   },
-);
-export default vuetify;
+});
 
-
+// Usar Vuetify en la aplicación
 app.use(vuetify)
 
 app.mount('#app')
+

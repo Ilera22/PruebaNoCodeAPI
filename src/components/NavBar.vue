@@ -1,7 +1,7 @@
 <template>
 
   <v-app-bar app
-  color="primary">
+  color="red">
       <!-- Contenido de la barra de navegación -->
       <template v-slot:prepend>
       <v-btn icon="mdi-arrow-left"></v-btn>
