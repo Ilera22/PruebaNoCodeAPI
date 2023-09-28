@@ -13,8 +13,25 @@ app.use(router)
 // Configurar Vuetify
 const vuetify = createVuetify({
   components,
-  directives
-})
+  directives,
+  theme: {
+    dark: true, // Puedes usar true para un tema oscuro o false para uno claro
+    themes: {
+      dark: {
+        primary: '#1976D2', // Color primario en modo oscuro
+        secondary: '#424242', // Color secundario en modo oscuro
+        accent: '#82B1FF', // Color de acento en modo oscuro
+      },
+      light: {
+        primary: '#2196F3', // Color primario en modo claro
+        secondary: '#FF4081', // Color secundario en modo claro
+        accent: '#536DFE', // Color de acento en modo claro
+      },
+    },
+  },
+});
+export default vuetify;
+
 
 app.use(vuetify)
 

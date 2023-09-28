@@ -1,8 +1,11 @@
 <template>
 
-  <v-app-bar app>
+  <v-app-bar app
+  color="red">
       <!-- Contenido de la barra de navegación -->
-      <v-app-bar-title>Title</v-app-bar-title>
+      <template v-slot:prepend>
+      <v-btn icon="mdi-arrow-left"></v-btn>
+    </template>
 
     <v-spacer></v-spacer>
 
@@ -10,8 +13,11 @@
     <v-icon>mdi-magnify</v-icon>
     </v-btn>
       <v-btn @click="goToAbout">About</v-btn>
+      
+      <v-divider vertical class="mx-2"></v-divider>
+      <v-btn icon="mdi-dots-vertical"></v-btn>
 
-  </v-app-bar>
+    </v-app-bar>
 
 </template>
 
