@@ -9,13 +9,14 @@
 
     <v-spacer></v-spacer>
 
-    <v-btn icon>
-    <v-icon>mdi-magnify</v-icon>
-    </v-btn>
-      <v-btn @click="goToAbout">About</v-btn>
+    <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>.
+
+    <router-link to="/about">
+      <v-btn>About</v-btn>
+    </router-link>
       
-      <v-divider vertical class="mx-2"></v-divider>
-      <v-btn icon="mdi-dots-vertical"></v-btn>
+    <v-divider vertical class="mx-2"></v-divider>
+    <v-btn icon="mdi-dots-vertical"></v-btn>
 
     </v-app-bar>
 
