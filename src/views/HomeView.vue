@@ -3,6 +3,7 @@
     <v-carousel v-if="posts.length" cycle height="400" hide-delimiter-background show-arrows-on-hover>
       <v-carousel-item v-for="post in posts" :key="post.id">
         <v-sheet height="100%">
+          <v-img :src="post.feature_image" height="400" contain></v-img>
           <v-row class="fill-height" align="center" justify="center">
             <div class="text-h2">
               {{ post.title }}
@@ -15,6 +16,7 @@
     <v-alert v-if="error" type="error">{{ errorMessage }}</v-alert>
   </div>
 </template>
+
 
 <script>
 import axios from 'axios';
