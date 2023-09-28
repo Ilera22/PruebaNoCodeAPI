@@ -1,15 +1,13 @@
 <template>
 
   <v-app-bar app
-  color="red">
+  color="primary">
       <!-- Contenido de la barra de navegación -->
       <template v-slot:prepend>
       <v-btn icon="mdi-arrow-left"></v-btn>
     </template>
 
     <v-spacer></v-spacer>
-
-    <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>.
 
     <router-link to="/about">
       <v-btn>About</v-btn>

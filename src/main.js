@@ -17,10 +17,16 @@ const vuetify = createVuetify({
   theme: {
     dark: true, // Puedes usar true para un tema oscuro o false para uno claro
     themes: {
-      dark: {
-        primary: '#1976D2', // Color primario en modo oscuro
-        secondary: '#424242', // Color secundario en modo oscuro
-        accent: '#82B1FF', // Color de acento en modo oscuro
+      background: '#FFFFFF',
+      surface: '#FFFFFF',
+      primary: '#6200EE',
+      'primary-darken-1': '#3700B3',
+      secondary: '#03DAC6',
+      'secondary-darken-1': '#018786',
+      error: '#B00020',
+      info: '#2196F3',
+      success: '#4CAF50',
+      warning: '#FB8C00',
       },
       light: {
         primary: '#2196F3', // Color primario en modo claro
