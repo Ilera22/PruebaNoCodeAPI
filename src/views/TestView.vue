@@ -5,8 +5,8 @@
         <p>{{ post.excerpt }}</p>
         <!-- Aquí puedes agregar más campos del post como desees -->
       </div>
+      <V-btn>holi</V-btn>
     </div>
-    <V-btn>holi</V-btn>
   </template>
   
   <script>
