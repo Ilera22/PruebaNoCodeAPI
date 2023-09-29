@@ -1,6 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import NavBar from './components/NavBar.vue'
+import FooterSection from './components/FooterSection.vue'
+
 
 </script>
 
@@ -8,11 +10,20 @@ import NavBar from './components/NavBar.vue'
   <v-app>
 
    <!-- Agrega el componente NavBar aquí -->
-  <header>
-    <NavBar />
-  </header>
 
-  <RouterView />
+  <NavBar />
+
+  <body>
+    <RouterView />
+
+  </body>
+  
+
+  <FooterSection/>
+
+
+
+
 </v-app>
 
 </template>

@@ -1,6 +1,6 @@
 <template>
 
-  <v-app-bar app
+  <v-app-bar
   color="primary">
       <!-- Contenido de la barra de navegación -->
       <template v-slot:prepend>

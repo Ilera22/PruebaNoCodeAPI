@@ -1,20 +1,22 @@
 <template>
-  <div>
-    <v-carousel v-if="posts.length" cycle height="400" hide-delimiter-background show-arrows-on-hover>
+    <v-carousel 
+    v-if="posts.length" cycle 
+    hide-delimiters
+    show-arrows="hover">
       <v-carousel-item v-for="post in posts" :key="post.id">
         <v-sheet height="100%">
-          <v-img :src="post.feature_image" height="400" contain></v-img>
+          <v-img :src="post.feature_image"           
+          :aspect-ratio="16/9"
+          cover></v-img>
           <v-row class="fill-height" align="center" justify="center">
-            <div class="text-h2">
+            <div class="cover--reveal text-h3">
               {{ post.title }}
             </div>
-            <p>{{ post.excerpt }}</p>
           </v-row>
         </v-sheet>
       </v-carousel-item>
     </v-carousel>
     <v-alert v-if="error" type="error">{{ errorMessage }}</v-alert>
-  </div>
 </template>
 
 
@@ -53,6 +55,13 @@ export default {
 };
 </script>
 
-<style>
-/* Estilos personalizados para el carrusel si es necesario */
+<style scoped>
+  .cover--reveal {
+    align-items: center;
+    bottom: 0;
+    justify-content: center;
+    opacity: 0.9;
+    position: absolute;
+    width: 100%;
+  }
 </style>
