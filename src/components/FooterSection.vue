@@ -1,8 +1,6 @@
 <template>
-<v-footer
-  
-color="primary"
->
+<v-footer>
+
 
 </v-footer>
 </template>
