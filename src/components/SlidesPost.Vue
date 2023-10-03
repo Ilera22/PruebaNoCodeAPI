@@ -3,6 +3,8 @@
   <v-sheet
     class="mx-auto"
     elevation="8"
+    height="250"
+    
   >
     <v-slide-group
       v-model="model"
@@ -14,25 +16,17 @@
       <v-slide-group-item
         v-for="n in 10"
         :key="n"
-        v-slot="{ isSelected, toggle, selectedClass }"
       >
-        <v-card
-          color="grey-lighten-1"
-          :class="['ma-4', selectedClass]"
-          height="200"
-          width="100"
-          @click="toggle"
-        >
-          <div class="d-flex fill-height align-center justify-center">
-            <v-scale-transition>
-              <v-icon
-                v-if="isSelected"
-                color="white"
-                size="48"
-              ></v-icon>
-            </v-scale-transition>
-          </div>
-        </v-card>
+      <v-card class="mx-auto" color="grey-lighten-4" width="250"  >
+      <v-img
+        :aspect-ratio="4/3"
+        cover
+        src="https://cdn.vuetifyjs.com/images/cards/kitchen.png"
+      >
+      </v-img>
+
+      <v-card-text> titulo </v-card-text>
+    </v-card>
       </v-slide-group-item>
     </v-slide-group>
   </v-sheet>
