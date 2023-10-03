@@ -1,7 +1,8 @@
 <template>
 <v-footer>
-
-
+    <v-container>
+      <span>&copy; {{ new Date().getFullYear() }}</span>
+    </v-container>
 </v-footer>
 </template>
   

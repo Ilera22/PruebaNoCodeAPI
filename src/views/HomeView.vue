@@ -1,9 +1,12 @@
 <template>
   <div>
     <CarrouselHome1 />
-    <SlidesPost />
-    <!-- Otros componentes o contenido aquí -->
   </div>
+
+  <section>
+    <SlidesPost />
+  </section>
+  
 </template>
 
 <script>

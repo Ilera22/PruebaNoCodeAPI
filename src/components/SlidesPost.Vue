@@ -1,34 +1,43 @@
 <template>
-
-<div>
-    <!-- Slide Group para la etiqueta "Tag1" -->
-    <v-slide-group>
-      <v-slide-item v-for="index in 5" :key="index">
-        <v-card>
-          <v-img
-            src="https://cdn.vuetifyjs.com/images/cards/house.jpg"
-            height="200px"
-          ></v-img>
-          <v-card-title>Título del Post {{ index }}</v-card-title>
+<v-container>
+  <v-sheet
+    class="mx-auto"
+    elevation="8"
+  >
+    <v-slide-group
+      v-model="model"
+      class="pa-4"
+      selected-class="bg-primary"
+      multiple
+      show-arrows
+    >
+      <v-slide-group-item
+        v-for="n in 10"
+        :key="n"
+        v-slot="{ isSelected, toggle, selectedClass }"
+      >
+        <v-card
+          color="grey-lighten-1"
+          :class="['ma-4', selectedClass]"
+          height="200"
+          width="100"
+          @click="toggle"
+        >
+          <div class="d-flex fill-height align-center justify-center">
+            <v-scale-transition>
+              <v-icon
+                v-if="isSelected"
+                color="white"
+                size="48"
+                icon="mdi-close-circle-outline"
+              ></v-icon>
+            </v-scale-transition>
+          </div>
         </v-card>
-      </v-slide-item>
+      </v-slide-group-item>
     </v-slide-group>
-
-    <!-- Slide Group para la etiqueta "Tag2" -->
-    <v-slide-group>
-      <v-slide-item v-for="index in 5" :key="index">
-        <v-card>
-          <v-img
-            src="https://cdn.vuetifyjs.com/images/cards/road.jpg"
-            height="200px"
-          ></v-img>
-          <v-card-title>Título del Post {{ index }}</v-card-title>
-        </v-card>
-      </v-slide-item>
-    </v-slide-group>
-
-    <!-- Puedes agregar más v-slide-group para otras etiquetas... -->
-  </div>
+  </v-sheet>
+</v-container>
 </template>
 
 <script>
