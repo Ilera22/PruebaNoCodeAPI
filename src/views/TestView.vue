@@ -45,7 +45,7 @@ export default {
     showTitle(postId) {
       this.hoverPostId = postId;
     },
-    hideTitle(postId) {
+    hideTitle() {
       this.hoverPostId = null;
     },
   },
