@@ -1,7 +1,7 @@
 <template>
-  <v-container>
-    <div v-for="tag in tags" :key="tag.id" class="mb-5"> <!-- Agregamos un margen inferior para espacio entre v-sheets -->
-      <div class="text-h4 mb-3">{{ tag.name }}</div> <!-- Título del tag -->
+  <v-section>
+    <v-container v-for="tag in tags" :key="tag.id" class="mb-5"> <!-- Agregamos un margen inferior para espacio entre v-sheets -->
+      <div class="text-h4 mb-5">{{ tag.name }}</div> <!-- Título del tag -->
       <v-sheet
         class="mx-auto"
         elevation="8"
@@ -28,8 +28,8 @@
           </v-slide-group-item>
         </v-slide-group>
       </v-sheet>
-    </div>
-  </v-container>
+    </v-container>
+  </v-section>
 </template>
 
 <script>
