@@ -1,19 +1,13 @@
 <template>
-  <div>
+  <v-container>
     <div v-for="post in posts" :key="post.id">
       <div class="post-container">
-        <div class="post-image-container">
-          <img :src="post.image" @mouseover="showTitle(post.id)" @mouseleave="hideTitle(post.id)">
-          <h2 class="post-title" :class="{ 'show-title': hoverPostId === post.id }">{{ post.title }}</h2>
-        </div>
+        <h2>{{ post.title }}</h2>
         <p>{{ post.excerpt }}</p>
       </div>
     </div>
-  </div>
+  </v-container>
 
-  <div>
-    <V-btn>holi</V-btn>
-  </div>
 </template>
 
 <script>
@@ -31,8 +25,10 @@ export default {
   },
   methods: {
     async fetchPosts() {
-      const apiKey = import.meta.env.VUE_APP_GHOST_API_KEY;
-      const apiUrlBase = import.meta.env.VUE_APP_GHOST_API_URL;
+      const apiKey = 'a1e0fcf6f7ea7a36249cf02e53';
+      const apiUrlBase = 'http://128.199.8.129/ghost/api/v3/content/';
+      
+
 
       const apiUrl = apiUrlBase + 'posts/?key=' + apiKey + '&limit=5&order=view_count DESC';
       try {
@@ -41,12 +37,6 @@ export default {
       } catch (error) {
         console.error('Error fetching posts:', error);
       }
-    },
-    showTitle(postId) {
-      this.hoverPostId = postId;
-    },
-    hideTitle() {
-      this.hoverPostId = null;
     },
   },
 };
